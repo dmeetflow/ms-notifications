@@ -1,0 +1,1 @@
+# Microservicio de Emails creado por Carlos Castillo, como propuesta alternativa en el envío de notificaciones por correo con un diseño en el mensaje
