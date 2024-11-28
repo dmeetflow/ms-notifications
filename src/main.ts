@@ -1,20 +1,19 @@
 import { NestFactory } from '@nestjs/core';
+import { Transport } from '@nestjs/microservices';
+import { RabbitMQ } from './common/constants';
+
 import { AppModule } from './app.module';
-import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
-  
-  const app = await NestFactory.create(AppModule);
-  app.useGlobalPipes(
-    new ValidationPipe({
-      whitelist: true,
-      forbidNonWhitelisted: true,
-      transformOptions: {
-        enableImplicitConversion: true
-      }
-    })
-  )
-
-  await app.listen(process.env.PORT ?? 3000);
+  const app = await NestFactory.createMicroservice(AppModule, {
+    transport: Transport.RMQ,
+    options: {
+      urls: [process.env.AMQP_URL],
+      queue: RabbitMQ.NotificationQueue,
+    },
+  });
+  await app.listen();
+  console.log('Microservicio de notificaciones corriendo');
+  process.title = 'ms-notifications';
 }
 bootstrap();

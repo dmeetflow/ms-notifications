@@ -1,0 +1,104 @@
+{{!-- FORMATO ANTIGUO --}}
+{{!-- Se ha solicitado restablecer la contraseña de su cuenta en MemFollow.
+<br>
+La nueva contraseña es: {{password}}
+<br>
+Una vez ingrese a la plataforma MemFollow, que se encuentra en el siguiente link: http://191.239.118.117:3001/, puede dirigirse a su perfil para establecer una nueva contraseña personalizada.
+<br> --}}
+
+{{!-- FORMATO NUEVO --}}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container-mail{
+            border: thin solid rgba(0, 0, 0, 0.15);
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1rem;
+        }
+
+        .header-mail{
+            display: flex;
+            padding-bottom: 1rem;
+        }
+
+        .header-mail p{
+            font-weight: bold;
+            font-size: 20px;
+            color: rgb(105, 105, 105);
+            margin-left: 1rem;
+        }
+
+        .section-mail{
+            border-top: thin solid rgba(0, 0, 0, 0.15);
+            padding: 1rem;
+            border-bottom: thin solid rgba(0, 0, 0, 0.15);
+        }
+
+        .title-text{
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .section-mail a{
+            text-decoration: none;
+            display: block;
+            width: 120px;
+            text-align: center;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: rgb(26, 152, 255);
+            color: white;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        .section-mail a:hover{
+            background-color:  rgb(103, 186, 255);
+        }
+
+        .footer-mail{
+            padding-top: 1rem;
+            text-align: center;
+            font-size: 11px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-mail">
+
+        <header class="header-mail">
+            <img src="https://logos-download.com/wp-content/uploads/2019/06/About_Me_Logo_old-700x700.png" alt="Logo" width="60" height="60">
+            <p>Meeting Engine</p>
+        </header>
+
+        <section class="section-mail">
+            <p class="title-text">Recuperación de cuenta</p>
+            <p>Se ha solicitado restablecer la contraseña de su cuenta. Para ello, siga los siguientes pasos:</p>
+            <ol>
+                <li>Haga click en "Ingresar a la plataforma".</li>
+                <li>Ingrese su correo y la nueva contraseña definida más abajo.</li>
+                <li>Diríjase a su perfil</li>
+                <li>Cambie su contraseña por otra personalizada.</li>
+            </ol>
+            <strong>Su nueva contraseña es:</strong>
+            <strong>{{password}}</strong>
+            
+            <a href="http://memfollow.diinf.usach.cl/" target="_blank">Ingresar a la plataforma</a>
+            <p>Es importante que cambies tu contraseña a la máxima brevedad posible.</p>
+            
+        </section>
+
+        <footer class="footer-mail">
+            <p>Este correo ha sido generado automáticamente. Por favor no responder este correo.</p>
+        </footer>
+
+    </div>
+</body>
+</html>
