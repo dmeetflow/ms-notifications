@@ -25,6 +25,28 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Modificación de las siguientes plantillas (./src/mail/templates/):
+- actacreada.hbs
+- inmeeting.hbs
+- postmeeting.hbs
+- finishmeeting.hbs
+- resetpass.hbs
+
+Controladores utilizados (./src/notification/notification.controller.ts):
+- sendNotification
+- sendResetPass
+
+Servicios utilizados (./src/notification/notification.service.ts):
+- sendNotification
+- sendResetPass
+
+Eventos utilizados (./src/event-mail/event-mail.module.ts):
+- meetingMinute.created
+- auth.resetpass
+
+
+Además, en el archivo .env.development se tiene por el momento el siguiente correo para realizar llamadas: carlithosfrancis10@gmail.com
+proximamente se cambiará al correo corporativo.
 
 ## Installation
 
