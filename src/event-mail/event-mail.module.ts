@@ -41,7 +41,7 @@ export class EventMailModule {
           from: process.env.EMAIL_USER,
           template: 'actacreada',
           // subject: 'Soporte MemFollow: Has sido invitado a una nueva reunión con el rol de secretario/a el día ' + new Date(meetingMinuteDTO.startTime).toLocaleDateString() + ' a las ' + meetingMinuteDTO.startHour.toString().split('-')[0],
-          subject: 'Soporte MemFollow: Has sido invitado a la reunion número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto + ' con el rol de secretario/a el día ' + new Date(meetingMinuteDTO.startTime).toLocaleDateString() + ' a las ' + meetingMinuteDTO.startHour.toString().split('-')[0],
+          subject: 'Soporte Meetingware: Has sido invitado a la reunion número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto + ' con el rol de secretario/a el día ' + new Date(meetingMinuteDTO.startTime).toLocaleDateString() + ' a las ' + meetingMinuteDTO.startHour.toString().split('-')[0],
           context: {
             name: user.email,
             acta: meetingMinuteDTO.title,
@@ -62,7 +62,7 @@ export class EventMailModule {
           from: process.env.EMAIL_USER,
           template: 'actacreada',
           // subject: 'Soporte MemFollow: Has sido invitado a una nueva reunión con el rol de anfitrión/a el día ' + new Date(meetingMinuteDTO.startTime).toLocaleDateString() + ' a las ' + meetingMinuteDTO.startHour.toString().split('-')[0],
-          subject: 'Soporte MemFollow: Has sido invitado a la reunion número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto + ' con el rol de anfitrión/a el día ' + new Date(meetingMinuteDTO.startTime).toLocaleDateString() + ' a las ' + meetingMinuteDTO.startHour.toString().split('-')[0],
+          subject: 'Soporte Meetingware: Has sido invitado a la reunion número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto + ' con el rol de anfitrión/a el día ' + new Date(meetingMinuteDTO.startTime).toLocaleDateString() + ' a las ' + meetingMinuteDTO.startHour.toString().split('-')[0],
           context: {
             name: user.email,
             acta: meetingMinuteDTO.title,
@@ -83,7 +83,7 @@ export class EventMailModule {
           from: process.env.EMAIL_USER,
           template: 'actacreada',
           // subject: 'Soporte MemFollow: Has sido invitado a una nueva reunión el día ' + new Date(meetingMinuteDTO.startTime).toLocaleDateString() + ' a las ' + meetingMinuteDTO.startHour.toString().split('-')[0],
-          subject: 'Soporte MemFollow: Has sido invitado a la reunion número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto + ' el día ' + new Date(meetingMinuteDTO.startTime).toLocaleDateString() + ' a las ' + meetingMinuteDTO.startHour.toString().split('-')[0],
+          subject: 'Soporte Meetingware: Has sido invitado a la reunion número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto + ' el día ' + new Date(meetingMinuteDTO.startTime).toLocaleDateString() + ' a las ' + meetingMinuteDTO.startHour.toString().split('-')[0],
           context: {
             name: user.email,
             acta: meetingMinuteDTO.title,
@@ -106,7 +106,7 @@ export class EventMailModule {
           to: meetingMinuteDTO.participants[i],
           from: process.env.EMAIL_USER,
           template: 'inmeeting',
-          subject: 'Soporte Meetflow: Ha comenzado la reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto,
+          subject: 'Soporte Meetingware: Ha comenzado la reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto,
           context: {
             name: user.email,
             acta: meetingMinuteDTO.title,
@@ -129,7 +129,7 @@ export class EventMailModule {
           from: process.env.EMAIL_USER,
           template: 'inmeeting',
           // subject: 'Soporte Meetflow: Ha comenzado la reunión , no olvides que eres secretario/a',
-          subject: 'Soporte Meetflow: Ha comenzado la reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto + ', no olvides que eres secretario/a',
+          subject: 'Soporte Meetingware: Ha comenzado la reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto + ', no olvides que eres secretario/a',
           context: {
             name: user.email,
             acta: meetingMinuteDTO.title,
@@ -150,7 +150,7 @@ export class EventMailModule {
           from: process.env.EMAIL_USER,
           template: 'inmeeting',
           // subject: 'Soporte Meetflow: Ha comenzado la reunión, no olvides que eres anfitrión/a',
-          subject: 'Soporte Meetflow: Ha comenzado la reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto + ', no olvides que eres anfitrión/a',
+          subject: 'Soporte Meetingware: Ha comenzado la reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto + ', no olvides que eres anfitrión/a',
           context: {
             name: user.email,
             acta: meetingMinuteDTO.title,
@@ -174,7 +174,7 @@ export class EventMailModule {
           to: meetingMinuteDTO.participants[i],
           from: process.env.EMAIL_USER,
           template: 'postmeeting',
-          subject: 'Soporte Meetflow: Ha finalizado la reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto,
+          subject: 'Soporte Meetingware: Ha finalizado la reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto,
           context: {
             name: user.email,
             acta: meetingMinuteDTO.title,
@@ -197,7 +197,7 @@ export class EventMailModule {
           from: process.env.EMAIL_USER,
           template: 'postmeeting',
           // subject: 'Soporte Meetflow: Ha finalizado la reunión, no olvides que eres secretario/a',
-          subject: 'Soporte Meetflow: Ha finalizado la reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto + ', no olvides que eres secretario/a',
+          subject: 'Soporte Meetingware: Ha finalizado la reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto + ', no olvides que eres secretario/a',
           context: {
             name: user.email,
             acta: meetingMinuteDTO.title,
@@ -218,7 +218,7 @@ export class EventMailModule {
           from: process.env.EMAIL_USER,
           template: 'postmeeting',
           // subject: 'Soporte Meetflow: Ha finalizado la reunión, no olvides que eres anfitrión/a',
-          subject: 'Soporte Meetflow: Ha finalizado la reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto + ', no olvides que eres anfitrión/a',
+          subject: 'Soporte Meetingware: Ha finalizado la reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto + ', no olvides que eres anfitrión/a',
           context: {
             name: user.email,
             acta: meetingMinuteDTO.title,
@@ -239,7 +239,7 @@ export class EventMailModule {
           to: meetingMinuteDTO.participants[i],
           from: process.env.EMAIL_USER,
           template: 'finishmeeting',
-          subject: 'Soporte Meetflow: La reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto  +' ha sido archivada',
+          subject: 'Soporte Meetingware: La reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto  +' ha sido archivada',
           context: {
             name: user.email,
             acta: meetingMinuteDTO.title,
@@ -260,7 +260,7 @@ export class EventMailModule {
           from: process.env.EMAIL_USER,
           template: 'finishmeeting',
           // subject: 'Soporte Meetflow: La reunión ha sido archivada, no olvides que eres secretario/a',
-          subject: 'Soporte Meetflow: La reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto  +' ha sido archivada, no olvides que eres secretario/a',
+          subject: 'Soporte Meetingware: La reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto  +' ha sido archivada, no olvides que eres secretario/a',
           context: {
             name: user.email,
             acta: meetingMinuteDTO.title,
@@ -281,7 +281,7 @@ export class EventMailModule {
           from: process.env.EMAIL_USER,
           template: 'finishmeeting',
           // subject: 'Soporte Meetflow: La reunión ha sido archivada, no olvides que eres anfitrión/a',
-          subject: 'Soporte Meetflow: La reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto  +' ha sido archivada, no olvides que eres anfitrión/a',
+          subject: 'Soporte Meetingware: La reunión número ' + meetingMinuteDTO.number.toString() + ' del proyecto ' + meetingMinuteDTO.nombreCortoProyecto  +' ha sido archivada, no olvides que eres anfitrión/a',
           context: {
             name: user.email,
             acta: meetingMinuteDTO.title,
@@ -356,7 +356,7 @@ export class EventMailModule {
       to: user.email,
       from: process.env.EMAIL_USER,
       template: 'resetpass',
-      subject: 'Soporte MemFollow: Recuperación de cuenta',
+      subject: 'Soporte Meetingware: Recuperación de cuenta',
       context: {
         name: user.email,
         password: user.password
